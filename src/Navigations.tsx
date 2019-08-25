@@ -26,7 +26,11 @@ const drawerNavigation = createDrawerNavigator(
     LeaveApp: { screen: LeaveScreen },
     Camera: { screen: CameraScreen }
   },
-  { initialRouteName: "Uber" }
+  {
+    initialRouteName: "Uber",
+    backBehavior: "initialRoute",
+    unmountInactiveRoutes: true
+  }
 );
 
 export default createAppContainer(drawerNavigation);
